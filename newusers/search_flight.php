@@ -61,7 +61,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST['submit'])){
         <label for="toggle"><i class="material-icons">menu</i></label>
         <div class="menu" >
           <ul>
-            <li><a href="./book_flight.php">Book Flight</a></li>
             <li><a href="./search_flight.php">Search Flight</a></li>
             <li><a href="./mytickets.php">View Tickets</a></li>
             <li><div class="dropdown">
@@ -114,8 +113,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST['submit'])){
 		content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<form method="POST">
-		<select name="start" id="startz">
+<div class="col-md-8 col-lg-6 col-xl-4 offset-xl-4">
+	<form method="POST" class="row g-3">
+		<select name="start" id="startz" class="form-select">
 			<?php
 				while ($category = mysqli_fetch_array(
 						$all_categories,MYSQLI_ASSOC)):;
@@ -128,9 +128,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST['submit'])){
 			<?php
 				endwhile;
 			?>
-		</select><button type="button" onclick="change()" style="border-radius: 50%;border-width:0;background-color:white;"><i class="fa fa-exchange"></i></button>
+		</select><button type="button" onclick="change()" style="border-radius: 50%;border-width:0;background-color:white;align-items:center;"><i class="fa fa-exchange"></i></button>
 		
-    <select name="stop" id="stopz">
+    <select name="stop" id="stopz" class="form-select">
 			<?php
 				while ($category = mysqli_fetch_array(
 						$all_categories1,MYSQLI_ASSOC)):;
@@ -165,7 +165,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST['submit'])){
 	</form>
 
 	<br>
-  <table class="table" >
+  <table class="table" style="padding-bottom: 50px;" >
 <tr align="center">
     <th>Flight Name</th>
     <th>Start</th>
@@ -205,7 +205,7 @@ if(isset($_POST['date1'])){
 ?>
 </table>
 <h3 style="text-align: center;">RETURN FLIGHTS</h3>
-  <table class="table" >
+  <table class="table" style="padding-bottom: 50px;">
 <tr align="center">
     <th>Flight Name</th>
     <th>Start</th>

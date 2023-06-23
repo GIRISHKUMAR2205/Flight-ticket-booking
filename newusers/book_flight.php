@@ -73,7 +73,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST['submit'])){
         <label for="toggle"><i class="material-icons">menu</i></label>
         <div class="menu" >
           <ul>
-            <li><a href="./book_flight.php">Book Flight</a></li>
             <li><a href="./search_flight.php">Search Flight</a></li>
             <li><a href="./mytickets.php">View Tickets</a></li>
             <li><div class="dropdown">

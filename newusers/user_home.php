@@ -29,7 +29,6 @@ $id=$_SESSION['id'];
         <label for="toggle"><i class="material-icons">menu</i></label>
         <div class="menu" >
           <ul>
-            <li><a href="./book_flight.php">Book Flights</a></li>
             <li><a href="./search_flight.php">Search Flight</a></li>
             <li><a href="./mytickets.php">View Tickets</a></li>
             <li><div class="dropdown">
